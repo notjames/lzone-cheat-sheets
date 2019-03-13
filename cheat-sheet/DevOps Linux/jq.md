@@ -47,7 +47,7 @@ From https://www.terraform.io/docs/providers/external/data_source.html
 
 To fill environment variables from JSON object keys (e.g. $FOO from jq query ".foo")
 
-    eval "$(jq -r '@sh "FOO=\(.foo) BAZ=\(.baz)"')"
+    export "$(jq -r '@sh "FOO=\(.foo) BAZ=\(.baz)"')"
     
 ### JSON template using env vars
 
